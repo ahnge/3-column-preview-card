@@ -1,0 +1,127 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsl(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    background-color: var(--light-gray);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container div {
+    flex-basis: 25%;
+    padding: 3%;
+    height: 70%;
+    position: relative;
+}
+.container div h1 {
+    color: var(--light-gray);
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.container div p {
+    color: var(--light-gray);
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    padding-right: 15%;
+    line-height: 1.6rem;
+}
+.container div a {
+    padding: 10px 25px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 7%;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.one {
+    border-radius: 7px 0 0 7px;
+}
+.one svg, .one h1, .one p, .one{
+    background-color: var(--Bright-orange);
+}
+.one a {
+    color: var(--Bright-orange);
+}
+
+.two svg, .two h1, .two p, .two{
+    background-color: var(--Dark-cyan);
+}
+.two a {
+    color: var(--Dark-cyan);
+}
+
+.three {
+    border-radius: 0 7px 7px 0;
+}
+.three svg, .three h1, .three p, .three{
+    background-color: var(--Very-dark-cyan);
+}
+.three a {
+    color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: unset;
+        padding: 100px 0;
+    }
+    .container div {
+        width: 75%;
+        padding: 6%;
+    }
+    .container div p {
+        padding-right: 50%;
+        margin-bottom: 70px;
+    }
+    .container div a {
+        position: unset;
+    }
+
+    .one {
+        border-radius: 7px 7px 0 0;
+    }
+
+    .three {
+        border-radius: 0 0 7px 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container div p {
+        padding-right: 20%;
+    }
+    .container div {
+        padding: 7%;
+    }
+}
+
+@media (max-width: 425px) {
+    .container div {
+        padding: 10%;
+    }
+    .container div p {
+        padding-right: 0;
+    }
+    .container div a {
+        font-size: 17px;
+    }
+}
